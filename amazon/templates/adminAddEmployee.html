@@ -1,0 +1,81 @@
+{% include "headeradmin.html" %}
+
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#">Add Employee </a></h2>
+													</div>
+				<form method="post" action="reg-success">
+					{% csrf_token %}
+						<table class="table table-hover">
+							<tr>
+								<td>Emp ID </td>
+								<td><input type="text" class="form-control" name="txtEmpId" placeholder="Enter the Employee ID"> </td>
+							</tr>
+
+							<tr>
+								<td>Name </td>
+								<td><input type="text" class="form-control" name="txtName" placeholder="Enter the Name"> </td>
+							</tr>
+
+
+							<tr>
+								<td>Email ID </td>
+								<td><input type="text" class="form-control" name="txtEmail" placeholder="Enter the Email ID"> </td>
+							</tr>
+
+							<tr>
+								<td>Mobile Number </td>
+								<td><input type="text" class="form-control" name="txtMobile" placeholder="Enter the Mobile Number"> </td>
+							</tr>
+
+							<tr>
+								<td>Designation </td>
+								<td><input type="text" class="form-control" name="txtDesignation" placeholder="Enter the Designation"> </td>
+							</tr>
+
+							<tr>
+								<td>Salary </td>
+								<td><input type="text" class="form-control" name="txtSalary" placeholder="Enter the Salary"> </td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td><input type="submit" class="btn btn-success" value="Submit"> </td>
+							</tr>
+
+
+
+
+						</table>
+				</form>
+
+
+
+
+
+
+
+
+
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					{% include "sidebaradmin.html" %}
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">FCT</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

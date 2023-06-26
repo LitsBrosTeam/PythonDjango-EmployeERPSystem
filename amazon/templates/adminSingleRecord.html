@@ -1,0 +1,93 @@
+{% include "headeradmin.html" %}
+
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#"> Show Employee Record</a></h2>
+													</div>
+
+
+						<table class="table table-hover">
+							<form method="post" action="/update-employee/{{emplist.empid}}/">
+										{% csrf_token %}
+							<tr>
+								<td>Emp ID </td>
+								<td><input type="text" class="form-control" name="txtEmpId" placeholder="Enter the Employee ID" value="{{emplist.empid}}" > </td>
+							</tr>
+
+							<tr>
+								<td>Name </td>
+								<td><input type="text" class="form-control" name="txtName" placeholder="Enter the Name" value="{{emplist.empname}}"> </td>
+							</tr>
+
+
+							<tr>
+								<td>Email ID </td>
+								<td><input type="text" class="form-control" name="txtEmail" placeholder="Enter the Email ID" value="{{emplist.empemail}}"> </td>
+							</tr>
+
+							<tr>
+								<td>Mobile Number </td>
+								<td><input type="text" class="form-control" name="txtMobile" placeholder="Enter the Mobile Number" value="{{emplist.empmobile}}"> </td>
+							</tr>
+
+							<tr>
+								<td>Designation </td>
+								<td><input type="text" class="form-control" name="txtDesignation" placeholder="Enter the Designation" value="{{emplist.empdesignation}}"> </td>
+							</tr>
+
+							<tr>
+								<td>Salary </td>
+								<td><input type="text" class="form-control" name="txtSalary" placeholder="Enter the Salary" value="{{emplist.empsalary}}"> </td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td>
+									<input type="submit" class="btn btn-success" value="Update">
+
+
+
+								</td>
+							</tr>
+							</form>
+
+						<tr>
+								<td> </td>
+								<td>
+
+									<form method="post" action="/delete-employee/{{emplist.empid}}/">
+										{% csrf_token %}
+										<input type="submit" class="btn btn-danger" value="Delete">
+									</form>
+
+
+
+								</td>
+							</tr>
+
+						</table>
+
+
+
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					{% include "sidebaradmin.html" %}
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">FCT</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
